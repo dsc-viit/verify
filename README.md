@@ -1,4 +1,7 @@
-# How to add yourself ?
+# PROTIP
+Don't forget to add coma in json lists/objects 
+
+## How to add yourself ?
 
 1) Fork the repo  
 2) clone the repo to your desktop
