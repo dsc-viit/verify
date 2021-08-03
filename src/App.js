@@ -1,18 +1,27 @@
 
 import { useEffect, useState } from 'react';
 import data from './assests/data.json';
+import { images } from './images';
 function App() {
   const [md5, setmd5] = useState("");
   const [loading, setloading] = useState(null);
   useEffect(() => {
 
   }, [loading]);
-  if (loading == false && md5 != "" && data[md5]) {
-    console.log(data[md5]);
+  if (loading === false && (data[md5] === null || data[md5] === undefined)) {
+    setloading(true);
+    setmd5("");
+
+    alert('Invalid md5');
+    return (
+      <></>
+    )
+  }
+  else if (loading === false && md5 !== "" && data[md5]) {
     return (
       <>
         <center>
-          <img src={`https://dsc-viit.github.io/verify/${md5}.jpg`} />
+          <img src={images[md5]} alt={data[md5].name} />
           <p>{data[md5].name}</p>
           <p>{data[md5].role}</p>
           <p>{data[md5].tagline}</p>
@@ -22,7 +31,7 @@ function App() {
             e.preventDefault();
             setloading(true);
             setmd5("");
-          }} type="submit" class="btn btn-primary">Clear</button>
+          }} type="submit" className="btn btn-primary">Clear</button>
         </center>
       </>
     );
@@ -31,17 +40,17 @@ function App() {
       <div className="container">
         <center>
           <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Enter the MD5</label>
+            <div className="mb-3">
+              <label htmlFor="exampleInputtext1" className="form-label">Enter the MD5</label>
               <input value={md5} onChange={(e) => {
                 setmd5(e.target.value);
-              }} type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-              <div id="emailHelp" class="form-text">You will find it on the certificate</div>
+              }} type="text" className="form-control" />
+              <div id="textHelp" className="form-text">You will find it on the certificate</div>
             </div>
             <button onClick={(e) => {
               e.preventDefault();
               setloading(false);
-            }} type="submit" class="btn btn-primary">verify</button>
+            }} type="submit" className="btn btn-primary">verify</button>
           </form>
         </center>
       </div>
