@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { useEffect, useState } from 'react';
 import data from './assests/data.json';
 import { images } from './images';
@@ -13,13 +13,11 @@ function App() {
     setmd5("");
 
     alert('Invalid md5');
-    return (
-      <></>
-    )
+    return <div></div>;
   }
   else if (loading === false && md5 !== "" && data[md5]) {
     return (
-      <>
+      <div>
         <center>
           <img src={images[md5]} alt={data[md5].name} />
           <p>{data[md5].name}</p>
@@ -33,7 +31,7 @@ function App() {
             setmd5("");
           }} type="submit" className="btn btn-primary">Clear</button>
         </center>
-      </>
+      </div>
     );
   } else
     return (
