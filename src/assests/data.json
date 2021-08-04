@@ -1,4 +1,17 @@
 {
+    "6F16E7CEE9F1260A83E51FDDA1B81C97": {
+        "name": "Kolli Sudeepa",
+        "codename":"pr_cf",
+        "role": "Public Realtions Head & Cloud Facilitator",
+        "image": "6F16E7CEE9F1260A83E51FDDA1B81C97.jpg",
+        "academic_year": "2018-2022",
+        "during": "2020-2021",
+        "github": "https://github.com/SudeepaNoble",
+        "linkedin": "https://www.linkedin.com/in/sudeepanoble/",
+        "twitter": "https://twitter.com/i_sudeepa",
+        "portfolio": "https://kollisudeepa.me",
+        "tagline": "Just Do It."
+    } ,
     "8F2E218B6F8EBA330DFDD3146BDC48C1": {
         "name": "Eswar Abisheak Tadiparthi",
         "codename":"lead2021",
@@ -24,5 +37,18 @@
         "twitter": "https://twitter.com/AkhileshKoti",
         "portfolio": "https://iamakhilesh.in/aboutme",
         "tagline": "Shift the Ctrl to me, I will alt the world."
+    },
+    "83BC9FE97429A693FD86AEE66B22D254":{
+        "name": "Ravi Prakash",
+        "codename":"ronin",
+        "role": "DSCVIIT WEB EXPERT",
+        "image": "83BC9FE97429A693FD86AEE66B22D254.jpg",
+        "academic_year": "2018-2022",
+        "during": "2020-2021",
+        "github": "https://github.com/raja-ravi-prakash",
+        "linkedin": "https://www.linkedin.com/in/raja-ravi-prakash/",
+        "twitter": "https://twitter.com/RajaRaviPrakash",
+        "portfolio": "https://ronin-admin.web.app",
+        "tagline": "I Write Programs"
     }
 }
