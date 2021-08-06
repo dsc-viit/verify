@@ -2,7 +2,19 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import data from './assests/data.json';
 import { images } from './images';
+function importAll(r) {
+  return r.keys().map(r);
+}
+function download(fileUrl, fileName) {
+  var a = document.createElement("a");
+  a.href = fileUrl;
+  a.setAttribute("download", fileName);
+  a.click();
+}
 function App() {
+  const certificates = importAll(require.context('./assests/certificates', false, /\.(pdf|svg)$/));
+
+  console.log(certificates);
   const [md5, setmd5] = useState("");
   const [loading, setloading] = useState(null);
   useEffect(() => {
@@ -16,21 +28,51 @@ function App() {
     return <div></div>;
   }
   else if (loading === false && md5 !== "" && data[md5]) {
+    var path = [];
+    certificates.forEach((i) => {
+      var st = `${i.default}`;
+      if (st.includes(md5))
+        path.push(st);
+    });
+    console.log(path);
     return (
-      <div>
+      <div className="container">
+        <img className="rounded mx-auto d-block" src={path[1]} alt={data[md5].name} />
         <center>
-          <img src={images[md5]} alt={data[md5].name} />
-          <p>{data[md5].name}</p>
-          <p>{data[md5].role}</p>
-          <p>{data[md5].tagline}</p>
-          <p>{data[md5].during}</p>
-          <p>{data[md5].academic_year}</p>
-          <button onClick={(e) => {
-            e.preventDefault();
-            setloading(true);
-            setmd5("");
-          }} type="submit" className="btn btn-primary">Clear</button>
+          <div className="row" >
+            <div className="col-auto pt-2 pb-4 m-2">
+              <center>
+                <button onClick={(e) => {
+                  e.preventDefault();
+                  download(path[1], data[md5].name);
+                }} type="submit" className="btn btn-primary">Download svg</button>
+              </center>
+            </div>
+            <div className="col-auto pt-2 pb-4 m-2">
+              <center>
+                <button onClick={(e) => {
+                  e.preventDefault();
+                  download(path[0], data[md5].name);
+                }} type="submit" className="btn btn-primary">Download pdf</button>
+              </center>
+            </div>
+          </div>
         </center>
+        <div className="row" >
+          <div className="col">
+            <img style={{
+              height: 400,
+            }} className="rounded mx-auto d-block" src={images[md5]} alt={data[md5].name} />
+          </div>
+          <div className="col">
+            <p>{data[md5].name}</p>
+            <p>{data[md5].role}</p>
+            <p>{data[md5].tagline}</p>
+            <p>{data[md5].during}</p>
+            <p>{data[md5].academic_year}</p>
+          </div>
+        </div >
+
       </div>
     );
   } else
