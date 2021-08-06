@@ -15,11 +15,16 @@ function App() {
   const certificates = importAll(require.context('./assests/certificates', false, /\.(pdf|svg)$/));
 
   console.log(certificates);
-  const [md5, setmd5] = useState("");
+  const [md5, setmd5] = useState(window.location.search.replace('?id=', ""));
   const [loading, setloading] = useState(null);
   useEffect(() => {
-
   }, [loading]);
+  useEffect(() => {
+    setmd5(window.location.search.replace('?id=', ""));
+    if (data[md5] !== null) {
+      setloading(false);
+    }
+  }, []);
   if (loading === false && (data[md5] === null || data[md5] === undefined)) {
     setloading(true);
     setmd5("");
