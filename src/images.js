@@ -4,6 +4,7 @@ import pr_cf from "./assests/images/6F16E7CEE9F1260A83E51FDDA1B81C97.jpg";
 import akhil_1201 from "./assests/images/5A2AED19A11DE3CB10C45DF1F3047C99.jpeg";
 import co_lead21 from "./assests/images/6F113046D7F8DF1AECAED3F2E9ED4126.jpg";
 import eh_sahithi from "./assests/images/75E9031BBA11C85B62B0F7EF01A76A29.jpg";
+import dheerajy2310 from "./assests/images/9231509D341251763DA61EA11DE2A937.jpg";
 import __shan__ from "./assests/images/B45896B0A1C8478C5FD333382D240D0F.jpeg";
 
 export const images = {
@@ -13,5 +14,6 @@ export const images = {
   "83BC9FE97429A693FD86AEE66B22D254": ronin,
   "6F113046D7F8DF1AECAED3F2E9ED4126": co_lead21,
   "75E9031BBA11C85B62B0F7EF01A76A29": eh_sahithi,
-  "B45896B0A1C8478C5FD333382D240D0F": __shan__
+  "9231509D341251763DA61EA11DE2A937": dheerajy2310,
+  "B45896B0A1C8478C5FD333382D240D0F": __shan__,
 };

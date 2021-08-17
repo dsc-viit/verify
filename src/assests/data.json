@@ -77,7 +77,19 @@
         "portfolio": "",
         "tagline": "Never Give up!"
     },
-
+    "9231509D341251763DA61EA11DE2A937":{
+        "name": "Yandrapu Dheeraj",
+        "codename":"dheerajy2310",
+        "role": "DSCVIIT Mobile Lead",
+        "image": "9231509D341251763DA61EA11DE2A937.png",
+        "academic_year": "2018-2022",
+        "during": "2020-2021",
+        "github": "https://github.com/dheerajy2310",
+        "linkedin": "https://www.linkedin.com/in/yandrapu-dheeraj-851658170/",
+        "twitter": "https://twitter.com/dheerajyandrapu",
+        "portfolio": "",
+        "tagline": "Believe in Yourself"
+    },
     "B45896B0A1C8478C5FD333382D240D0F": {
         "name": "Shanmuk Pandranki",
         "codename": "__shan__",
@@ -91,5 +103,4 @@
         "portfolio": "",
         "tagline": "Create New!"
     }
-    
 }
